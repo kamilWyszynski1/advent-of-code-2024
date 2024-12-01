@@ -1,14 +1,7 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+#![allow(dead_code)]
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+mod day1;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+fn read_input(day: &str) -> String {
+    std::fs::read_to_string(format!("input/{}.txt", day)).unwrap()
 }
