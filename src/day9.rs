@@ -95,7 +95,6 @@ fn day9a(input: &str) -> isize {
     let mut curr_inx = 0;
     while curr_inx < input.len() {
         let curr = &input[curr_inx];
-        // dbg!(&curr);
         match curr {
             Value::Empty(_) => { continue }
             Value::Val { inx, amount } => {
@@ -280,6 +279,3 @@ mod tests {
         println!("day9b result {}", day9b(&read_input("day9")))
     }
 }
-
-// 00992111777.44.333....5555.6666.....8888..
-// 00992111777.44.333..5555.6666.....8888

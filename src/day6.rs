@@ -100,8 +100,6 @@ fn day6b(input: &str) -> isize {
             let (nx, ny) = (point.0 + dx, point.1 + dy);
             if 0 <= nx && nx < n && 0 <= ny && ny < m {
                 if map[nx as usize][ny as usize] != '^' {
-                    // println!("{} {} | {} out of {}", nx, ny, inx, inclen);
-
                     let tmp = map[nx as usize][ny as usize];
                     map[nx as usize][ny as usize] = '#';
                     if is_infinite_loop(&map) && !included.contains(&(nx as usize, ny as usize)) {
@@ -139,7 +137,6 @@ fn is_infinite_loop(map: &Vec<Vec<char>>) -> bool {
                 dir = dir.rotate_right();
                 break;
             }
-            // println!("{:?}, {:?}", next, dir);
             beens.insert(Been { pos: next, dir });
             position = next;
         }
