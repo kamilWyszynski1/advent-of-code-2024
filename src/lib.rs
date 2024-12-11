@@ -10,6 +10,7 @@ mod day7;
 mod day8;
 mod day9;
 mod day10;
+mod day11;
 
 fn read_input(day: &str) -> String {
     std::fs::read_to_string(format!("input/{}.txt", day)).unwrap()
